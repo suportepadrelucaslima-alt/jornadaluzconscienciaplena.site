@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
       process.env.JWT_SECRET,
       { expiresIn: '365d' }
     );
-    return res.json({ token, redirect: '/produto-premium/' });
+    return res.json({ token, redirect: '/inicio-oracoes-principal/' });
   }
 
   // ── LOGIN NORMAL (comprador) ───────────────────────────────────
@@ -57,5 +57,5 @@ module.exports = async (req, res) => {
     { expiresIn: '30d' }
   );
 
-  return res.json({ token, redirect: '/produto-premium/' });
+  return res.json({ token, redirect: '/inicio-oracoes-principal/' });
 };

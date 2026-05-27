@@ -205,39 +205,95 @@
         /* Knot ribbon decorative */
         .knot-ornament { color: rgba(212,175,55,0.55); letter-spacing: 6px; font-size: 0.85rem; }
 
+        /* Premium Section */
+        #biblioteca-premium { position: relative; }
+        #biblioteca-premium::before, #biblioteca-premium::after {
+          content: ''; position: absolute; left: 0; right: 0; height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(212,175,55,.55), transparent);
+        }
+        #biblioteca-premium::before { top: 0; }
+        #biblioteca-premium::after  { bottom: 0; }
+
         /* Premium Cards */
         .premium-card {
-          background: rgba(8,18,50,.92);
-          border: 2px solid rgba(212,175,55,.55);
-          border-radius: 20px; overflow: hidden;
-          transition: transform .3s, box-shadow .3s;
-          box-shadow: 0 4px 20px rgba(0,0,0,.30);
+          background: rgba(6,14,44,.97);
+          border: 1px solid rgba(212,175,55,.28);
+          border-radius: 18px; overflow: hidden;
+          transition: transform .35s, box-shadow .35s, border-color .35s;
+          box-shadow: 0 6px 24px rgba(0,0,0,.45);
           height: 100%; display: flex; flex-direction: column;
+          position: relative;
         }
-        .premium-card:hover { transform: translateY(-6px); box-shadow: 0 14px 36px rgba(212,175,55,.30); border-color: rgba(212,175,55,.9); }
-        .premium-card-header { padding: 28px 20px 18px; text-align: center; background: linear-gradient(180deg,rgba(12,26,70,.80),transparent); }
-        .premium-icon { font-size: 46px; color: #d4af37; margin-bottom: 12px; display: block; }
-        .premium-badge { background: linear-gradient(135deg,#b8870b,#f7de6a,#b8870b); color: #06103a; padding: 4px 14px; border-radius: 20px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 10px; font-family: 'Cinzel',serif; }
-        .premium-title { font-family: 'Cinzel',serif; color: #d4af37; font-size: 1.1rem; font-weight: 700; margin-bottom: 0; }
-        .premium-body { padding: 0 20px 24px; flex: 1; display: flex; flex-direction: column; }
-        .premium-desc { color: rgba(255,255,255,.75); font-size: .9rem; line-height: 1.6; margin: 14px 0 18px; flex: 1; }
+        .premium-card::before {
+          content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+          background: linear-gradient(90deg, transparent, #d4af37, transparent);
+          opacity: .55; transition: opacity .35s; z-index: 1;
+        }
+        .premium-card:hover { transform: translateY(-8px); box-shadow: 0 22px 50px rgba(212,175,55,.20), 0 8px 22px rgba(0,0,0,.55); border-color: rgba(212,175,55,.60); }
+        .premium-card:hover::before { opacity: 1; }
+
+        .premium-card-img {
+          width:100%;
+          background: linear-gradient(160deg,#06103a 0%,#0b1a50 100%);
+          display:flex; align-items:center; justify-content:center;
+          overflow:hidden; aspect-ratio:4/3; position: relative;
+        }
+        .premium-card-img::after {
+          content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
+          background: linear-gradient(0deg, rgba(6,14,44,1) 0%, transparent 100%);
+          pointer-events: none; z-index: 1;
+        }
+        .premium-card-img img {
+          width:100%; height:100%;
+          object-fit:contain; object-position:center;
+          transition:transform .5s; padding:10px;
+        }
+        .premium-card:hover .premium-card-img img { transform:scale(1.07); }
+
+        .premium-img-badge {
+          position: absolute; top: 11px; left: 11px; z-index: 2;
+          background: linear-gradient(135deg,#b8870b,#f7de6a,#b8870b);
+          color: #06103a; padding: 3px 11px; border-radius: 20px;
+          font-size: .65rem; font-weight: 800; font-family: 'Cinzel',serif;
+          letter-spacing: .6px; box-shadow: 0 2px 8px rgba(0,0,0,.40);
+        }
+
+        .premium-card-header { padding: 16px 20px 8px; }
+        .premium-title { font-family: 'Cinzel',serif; color: #fff; font-size: 1.02rem; font-weight: 700; margin-bottom: 0; line-height: 1.3; }
+
+        .premium-body { padding: 0 20px 22px; flex: 1; display: flex; flex-direction: column; }
+        .premium-desc { color: rgba(255,255,255,.55); font-size: .82rem; line-height: 1.55; margin: 8px 0 14px; }
+
+        .premium-features { list-style: none; padding: 0; margin: 0 0 18px; flex: 1; }
+        .premium-features li {
+          font-size: .82rem; color: rgba(255,255,255,.72);
+          display: flex; align-items: flex-start; gap: 8px;
+          padding: 5px 0; border-bottom: 1px solid rgba(212,175,55,.07);
+        }
+        .premium-features li:last-child { border-bottom: none; }
+        .premium-features li i { color: #d4af37; font-size: .72rem; margin-top: 3px; flex-shrink: 0; }
+
         .btn-acessar-premium {
           background: linear-gradient(135deg,#b8870b 0%,#f7de6a 50%,#b8870b 100%);
-          background-size: 200% auto; color: #06103a; border: none; font-weight: bold;
-          padding: 12px 20px; border-radius: 30px; font-size: .92rem; width: 100%;
+          background-size: 200% auto; color: #06103a; border: none; font-weight: 800;
+          padding: 13px 20px; border-radius: 30px; font-size: .88rem; width: 100%;
           transition: all .3s; font-family: 'Cinzel',serif; text-decoration: none;
           display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer;
         }
-        .btn-acessar-premium:hover { background-position: right center; color: #06103a; transform: translateY(-2px); }
+        .btn-acessar-premium:hover { background-position: right center; color: #06103a; transform: translateY(-2px); box-shadow: 0 6px 22px rgba(212,175,55,.45); }
         .btn-comprar-premium {
-          background: transparent; color: #d4af37;
-          border: 2px solid rgba(212,175,55,.6); font-weight: bold;
-          padding: 12px 20px; border-radius: 30px; font-size: .92rem; width: 100%;
+          background: rgba(212,175,55,.07); color: #d4af37;
+          border: 1.5px solid rgba(212,175,55,.40); font-weight: 700;
+          padding: 13px 20px; border-radius: 30px; font-size: .88rem; width: 100%;
           transition: all .3s; font-family: 'Cinzel',serif; text-decoration: none;
           display: flex; align-items: center; justify-content: center; gap: 8px;
         }
-        .btn-comprar-premium:hover { background: rgba(212,175,55,.12); border-color: #d4af37; color: #f7de6a; }
-        .lock-info { font-size: .75rem; color: rgba(212,175,55,.5); text-align: center; margin-top: 8px; }
+        .btn-comprar-premium:hover { background: rgba(212,175,55,.14); border-color: rgba(212,175,55,.75); color: #f7de6a; transform: translateY(-1px); }
+        .lock-info { font-size: .72rem; color: rgba(212,175,55,.42); text-align: center; margin-top: 8px; }
+
+        @media(max-width:575px){
+          .premium-card-img { aspect-ratio:3/2; }
+        }
     </style>
 </head>
 <body>
@@ -256,11 +312,11 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link active" href="./"><i class="fas fa-home me-2"></i>Início</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://osegredosdoprazer.site/instrucoes"><i class="fas fa-book me-2"></i>Instruções</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://osegredosdoprazer.site/jornada-de-7-dias"><i class="fas fa-calendar-day me-2"></i>Novena</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://osegredosdoprazer.site/oracoes-especiais"><i class="fas fa-dove me-2"></i>Orações Especiais</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://osegredosdoprazer.site/musicas-dos-anjos"><i class="fas fa-music me-2"></i>Músicas</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://osegredosdoprazer.site/audiolivro"><i class="fas fa-headphones me-2"></i>Áudiolivro</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://conexaoprosperidade.site/instrucoes"><i class="fas fa-book me-2"></i>Instruções</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://conexaoprosperidade.site/jornada-de-7-dias"><i class="fas fa-calendar-day me-2"></i>Novena</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://conexaoprosperidade.site/oracoes-especiais"><i class="fas fa-dove me-2"></i>Orações Especiais</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://conexaoprosperidade.site/musicas-dos-anjos"><i class="fas fa-music me-2"></i>Músicas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://conexaoprosperidade.site/audiolivro"><i class="fas fa-headphones me-2"></i>Áudiolivro</a></li>
                             <li class="nav-item"><hr style="border-color:rgba(212,175,55,.25);margin:4px 8px"></li>
                             <li class="nav-item">
                               <a class="nav-link nav-premium" id="nav-poder-dos-arcanjos"
@@ -332,6 +388,148 @@
             </div>
         </section>
 
+        <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-star"></i></div><div class="divider-line"></div></div>
+
+        <!-- Biblioteca Premium -->
+        <section id="biblioteca-premium" class="py-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-10 text-center">
+                <p style="color:rgba(212,175,55,.65);letter-spacing:4px;font-size:.72rem;font-family:'Cinzel',serif;">— ✦ BIBLIOTECA SAGRADA ✦ —</p>
+                <h2 class="title-font golden-text display-5 mb-2 section-heading">Conteúdo Premium Exclusivo</h2>
+                <p class="text-white fs-5 mb-5" style="max-width:580px;margin:0 auto 3rem;">Materiais sagrados para aprofundar sua vida espiritual. Cada produto desbloqueado automaticamente após a compra.</p>
+              </div>
+            </div>
+            <div class="row g-4 justify-content-center" id="premium-cards">
+
+              <!-- Poder dos 4 Arcanjos -->
+              <div class="col-12 col-sm-6 col-xl-3">
+                <div class="premium-card">
+                  <div class="premium-card-img">
+                    <span class="premium-img-badge">COMPLETO</span>
+                    <img src="images/4 arcanjos.png" alt="Poder dos 4 Arcanjos">
+                  </div>
+                  <div class="premium-card-header">
+                    <h3 class="premium-title">Poder dos 4 Arcanjos</h3>
+                  </div>
+                  <div class="premium-body">
+                    <ul class="premium-features">
+                      <li><i class="fas fa-check-circle"></i>Novena de 9 dias guiada</li>
+                      <li><i class="fas fa-check-circle"></i>Áudios de invocação sagrada</li>
+                      <li><i class="fas fa-check-circle"></i>Rituais e curso em 7 lições</li>
+                    </ul>
+                    <a id="btn-poder-dos-arcanjos"
+                       href="https://checkout.ticto.app/O4E158A76"
+                       class="btn-comprar-premium"
+                       data-produto="poder-dos-arcanjos"
+                       data-url-compra="https://checkout.ticto.app/O4E158A76"
+                       data-url-acesso="../poder-dos-arcanjos/">
+                      <i class="fas fa-lock"></i> Desbloquear Agora
+                    </a>
+                    <p class="lock-info" id="info-poder-dos-arcanjos"><i class="fas fa-lock me-1"></i>Disponível após a compra</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 30 Orações São Francisco -->
+              <div class="col-12 col-sm-6 col-xl-3">
+                <div class="premium-card">
+                  <div class="premium-card-img">
+                    <span class="premium-img-badge">DEVOÇÃO</span>
+                    <img src="images/30 oraçoes.jpg" alt="30 Orações de São Francisco">
+                  </div>
+                  <div class="premium-card-header">
+                    <h3 class="premium-title">30 Orações de São Francisco</h3>
+                  </div>
+                  <div class="premium-body">
+                    <ul class="premium-features">
+                      <li><i class="fas fa-check-circle"></i>30 orações atribuídas ao santo</li>
+                      <li><i class="fas fa-check-circle"></i>Paz, cura e proteção da natureza</li>
+                      <li><i class="fas fa-check-circle"></i>Orações de consagração e fé</li>
+                    </ul>
+                    <a id="btn-30-oracoes-sao-francisco"
+                       href="https://checkout.ticto.app/O3257E6B0"
+                       class="btn-comprar-premium"
+                       data-produto="30-oracoes-sao-francisco"
+                       data-url-compra="https://checkout.ticto.app/O3257E6B0"
+                       data-url-acesso="../30-oracoes-sao-francisco/">
+                      <i class="fas fa-lock"></i> Desbloquear Agora
+                    </a>
+                    <p class="lock-info" id="info-30-oracoes-sao-francisco"><i class="fas fa-lock me-1"></i>Disponível após a compra</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Músicas dos Anjos -->
+              <div class="col-12 col-sm-6 col-xl-3">
+                <div class="premium-card">
+                  <div class="premium-card-img">
+                    <span class="premium-img-badge">CONTEMPLAÇÃO</span>
+                    <img src="images/musicas dos anjos.png" alt="Músicas dos Anjos">
+                  </div>
+                  <div class="premium-card-header">
+                    <h3 class="premium-title">Músicas dos Anjos Premium</h3>
+                  </div>
+                  <div class="premium-body">
+                    <ul class="premium-features">
+                      <li><i class="fas fa-check-circle"></i>12 músicas sagradas exclusivas</li>
+                      <li><i class="fas fa-check-circle"></i>Gregorianas e instrumentais</li>
+                      <li><i class="fas fa-check-circle"></i>Trilha ideal para a oração</li>
+                    </ul>
+                    <a id="btn-musicas-dos-anjos-premium"
+                       href="https://checkout.ticto.app/OFF9B5375"
+                       class="btn-comprar-premium"
+                       data-produto="musicas-dos-anjos-premium"
+                       data-url-compra="https://checkout.ticto.app/OFF9B5375"
+                       data-url-acesso="../musicas-dos-anjos-premium/">
+                      <i class="fas fa-lock"></i> Desbloquear Agora
+                    </a>
+                    <p class="lock-info" id="info-musicas-dos-anjos-premium"><i class="fas fa-lock me-1"></i>Disponível após a compra</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Grimório dos Arcanjos -->
+              <div class="col-12 col-sm-6 col-xl-3">
+                <div class="premium-card">
+                  <div class="premium-card-img">
+                    <span class="premium-img-badge">EXCLUSIVO</span>
+                    <img src="images/grimorio.png" alt="Grimório dos Arcanjos">
+                  </div>
+                  <div class="premium-card-header">
+                    <h3 class="premium-title">Grimório dos Arcanjos</h3>
+                  </div>
+                  <div class="premium-body">
+                    <ul class="premium-features">
+                      <li><i class="fas fa-check-circle"></i>Símbolos e cores de cada arcanjo</li>
+                      <li><i class="fas fa-check-circle"></i>Invocações e rituais sagrados</li>
+                      <li><i class="fas fa-check-circle"></i>Guia completo para download</li>
+                    </ul>
+                    <a id="btn-grimorio-dos-arcanjos"
+                       href="https://checkout.ticto.app/O05856C5B"
+                       class="btn-comprar-premium"
+                       data-produto="grimorio-dos-arcanjos"
+                       data-url-compra="https://checkout.ticto.app/O05856C5B"
+                       data-url-acesso="../grimorio-dos-arcanjos/">
+                      <i class="fas fa-lock"></i> Desbloquear Agora
+                    </a>
+                    <p class="lock-info" id="info-grimorio-dos-arcanjos"><i class="fas fa-lock me-1"></i>Disponível após a compra</p>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /row -->
+
+            <!-- CTA login para não logados -->
+            <div id="premium-login-cta" class="text-center mt-4" style="display:none">
+              <p class="text-white mb-3" style="font-size:.95rem;opacity:.75;">Já comprou? Faça login para acessar seu conteúdo.</p>
+              <a href="../login/" class="btn btn-outline-light" style="border-radius:30px;padding:10px 28px;">
+                <i class="fas fa-sign-in-alt me-2"></i>Entrar na minha conta
+              </a>
+            </div>
+          </div>
+        </section>
+
         <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-ribbon"></i></div><div class="divider-line"></div></div>
 
         <!-- Novena de 9 dias -->
@@ -352,7 +550,7 @@
                             <p class="text-white fs-5 mb-2">9 orações poderosas — uma por dia — para cada nó da sua vida</p>
                             <div class="section-divider" style="margin:16px 0;"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-star"></i></div><div class="divider-line"></div></div>
                             <p class="day-description">Dedique 9 dias à intercessão de Nossa Senhora e sinta os nós da sua vida se desfazendo.</p>
-                            <a href="https://osegredosdoprazer.site/jornada-de-7-dias" class="btn btn-primary mt-2 mb-2 w-100 pulse-border" style="font-size:1.05rem;"><i class="fas fa-pray me-2"></i>Iniciar Minha Novena</a>
+                            <a href="https://conexaoprosperidade.site/jornada-de-7-dias" class="btn btn-primary mt-2 mb-2 w-100 pulse-border" style="font-size:1.05rem;"><i class="fas fa-pray me-2"></i>Iniciar Minha Novena</a>
                         </div>
                     </div>
                 </div>
@@ -389,7 +587,7 @@
                                 <span><i class="fas fa-hands-praying"></i> Fé em ação</span>
                                 <span><i class="fas fa-bolt"></i> Pedidos urgentes</span>
                             </div>
-                            <a href="https://osegredosdoprazer.site/oracoes-especiais" class="btn btn-primary mt-2 mb-2 w-100 pulse-border" style="font-size:1.05rem;"><i class="fas fa-dove me-2"></i>Acessar Minhas Orações Especiais</a>
+                            <a href="https://conexaoprosperidade.site/oracoes-especiais" class="btn btn-primary mt-2 mb-2 w-100 pulse-border" style="font-size:1.05rem;"><i class="fas fa-dove me-2"></i>Acessar Minhas Orações Especiais</a>
                         </div>
                     </div>
                 </div>
@@ -398,122 +596,6 @@
 
 
         <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-crown"></i></div><div class="divider-line"></div></div>
-
-        <!-- Biblioteca Premium -->
-        <section id="biblioteca-premium" class="py-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-10 text-center">
-                <p style="color:rgba(212,175,55,.65);letter-spacing:4px;font-size:.72rem;font-family:'Cinzel',serif;">— ✦ BIBLIOTECA SAGRADA ✦ —</p>
-                <h2 class="title-font golden-text display-5 mb-2 section-heading">Conteúdo Premium Exclusivo</h2>
-                <p class="text-white fs-5 mb-5" style="max-width:580px;margin:0 auto 3rem;">Materiais sagrados para aprofundar sua vida espiritual. Cada produto desbloqueado automaticamente após a compra.</p>
-              </div>
-            </div>
-            <div class="row g-4 justify-content-center" id="premium-cards">
-
-              <!-- Poder dos 4 Arcanjos -->
-              <div class="col-sm-6 col-xl-3">
-                <div class="premium-card">
-                  <div class="premium-card-header">
-                    <span class="premium-icon"><i class="fas fa-shield-halved"></i></span>
-                    <div class="premium-badge">COMPLETO</div>
-                    <h3 class="premium-title">Poder dos 4 Arcanjos</h3>
-                  </div>
-                  <div class="premium-body">
-                    <p class="premium-desc">Novena de 9 dias, áudios de invocação, rituais sagrados e curso devocional em 7 lições.</p>
-                    <a id="btn-poder-dos-arcanjos"
-                       href="https://checkout.ticto.app/O4E158A76"
-                       class="btn-comprar-premium"
-                       data-produto="poder-dos-arcanjos"
-                       data-url-compra="https://checkout.ticto.app/O4E158A76"
-                       data-url-acesso="../poder-dos-arcanjos/">
-                      <i class="fas fa-lock"></i> Desbloquear
-                    </a>
-                    <p class="lock-info" id="info-poder-dos-arcanjos"><i class="fas fa-lock me-1"></i>Disponível após a compra</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 30 Orações São Francisco -->
-              <div class="col-sm-6 col-xl-3">
-                <div class="premium-card">
-                  <div class="premium-card-header">
-                    <span class="premium-icon"><i class="fas fa-dove"></i></span>
-                    <div class="premium-badge">DEVOÇÃO</div>
-                    <h3 class="premium-title">30 Orações de São Francisco</h3>
-                  </div>
-                  <div class="premium-body">
-                    <p class="premium-desc">Trinta orações atribuídas a São Francisco de Assis para paz, cura, natureza e consagração.</p>
-                    <a id="btn-30-oracoes-sao-francisco"
-                       href="https://checkout.ticto.app/O3257E6B0"
-                       class="btn-comprar-premium"
-                       data-produto="30-oracoes-sao-francisco"
-                       data-url-compra="https://checkout.ticto.app/O3257E6B0"
-                       data-url-acesso="../30-oracoes-sao-francisco/">
-                      <i class="fas fa-lock"></i> Desbloquear
-                    </a>
-                    <p class="lock-info" id="info-30-oracoes-sao-francisco"><i class="fas fa-lock me-1"></i>Disponível após a compra</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Músicas dos Anjos -->
-              <div class="col-sm-6 col-xl-3">
-                <div class="premium-card">
-                  <div class="premium-card-header">
-                    <span class="premium-icon"><i class="fas fa-music"></i></span>
-                    <div class="premium-badge">CONTEMPLAÇÃO</div>
-                    <h3 class="premium-title">Músicas dos Anjos</h3>
-                  </div>
-                  <div class="premium-body">
-                    <p class="premium-desc">12 músicas sagradas selecionadas — gregorianas, dos arcanjos e instrumentais para oração.</p>
-                    <a id="btn-musicas-dos-anjos-premium"
-                       href="https://checkout.ticto.app/OFF9B5375"
-                       class="btn-comprar-premium"
-                       data-produto="musicas-dos-anjos-premium"
-                       data-url-compra="https://checkout.ticto.app/OFF9B5375"
-                       data-url-acesso="../musicas-dos-anjos-premium/">
-                      <i class="fas fa-lock"></i> Desbloquear
-                    </a>
-                    <p class="lock-info" id="info-musicas-dos-anjos-premium"><i class="fas fa-lock me-1"></i>Disponível após a compra</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Grimório dos Arcanjos -->
-              <div class="col-sm-6 col-xl-3">
-                <div class="premium-card" style="border-color:rgba(212,175,55,.85)">
-                  <div class="premium-card-header">
-                    <span class="premium-icon"><i class="fas fa-book-open"></i></span>
-                    <div class="premium-badge">EXCLUSIVO</div>
-                    <h3 class="premium-title">Grimório dos Arcanjos</h3>
-                  </div>
-                  <div class="premium-body">
-                    <p class="premium-desc">Guia completo: cores, símbolos, invocações, rituais e orações de cada arcanjo. PDF para download.</p>
-                    <a id="btn-grimorio-dos-arcanjos"
-                       href="https://checkout.ticto.app/O05856C5B"
-                       class="btn-comprar-premium"
-                       data-produto="grimorio-dos-arcanjos"
-                       data-url-compra="https://checkout.ticto.app/O05856C5B"
-                       data-url-acesso="../grimorio-dos-arcanjos/">
-                      <i class="fas fa-lock"></i> Desbloquear
-                    </a>
-                    <p class="lock-info" id="info-grimorio-dos-arcanjos"><i class="fas fa-lock me-1"></i>Disponível após a compra</p>
-                  </div>
-                </div>
-              </div>
-
-            </div><!-- /row -->
-
-            <!-- CTA login para não logados -->
-            <div id="premium-login-cta" class="text-center mt-4" style="display:none">
-              <p class="text-white mb-3" style="font-size:.95rem;opacity:.75;">Já comprou? Faça login para acessar seu conteúdo.</p>
-              <a href="../login/" class="btn btn-outline-light" style="border-radius:30px;padding:10px 28px;">
-                <i class="fas fa-sign-in-alt me-2"></i>Entrar na minha conta
-              </a>
-            </div>
-          </div>
-        </section>
 
         <div class="section-divider"><div class="divider-line"></div><div class="divider-icon"><i class="fas fa-book-open"></i></div><div class="divider-line"></div></div>
 
@@ -592,7 +674,7 @@
                 </div>
                 <div class="row mt-4 justify-content-center">
                     <div class="col-md-8 text-center">
-                        <a href="https://osegredosdoprazer.site/instrucoes" class="btn btn-outline-light btn-lg mt-4">
+                        <a href="https://conexaoprosperidade.site/instrucoes" class="btn btn-outline-light btn-lg mt-4">
                             <i class="fas fa-info-circle me-2"></i>Ver Instruções Completas
                         </a>
                     </div>
@@ -608,7 +690,7 @@
                 <div style="font-size:2rem;color:#d4af37;margin-bottom:10px;"><i class="fas fa-shield-alt"></i></div>
                 <h3 class="mb-2" style="color:#222;font-family:'Cinzel',serif;font-weight:bold;font-size:1.5rem;">Não ficou satisfeito?</h3>
                 <p style="color:#444;font-size:1.05rem;margin-bottom:16px;">Oferecemos garantia total de satisfação. Solicite seu reembolso de forma rápida e segura.</p>
-                <a href="https://osegredosdoprazer.site/reembolso" class="btn btn-danger fw-bold px-4 py-2 pulse-border" style="font-size:1.05rem;border-radius:30px;"><i class="fas fa-undo-alt me-2"></i>Quero pedir um reembolso</a>
+                <a href="https://conexaoprosperidade.site/reembolso" class="btn btn-danger fw-bold px-4 py-2 pulse-border" style="font-size:1.05rem;border-radius:30px;"><i class="fas fa-undo-alt me-2"></i>Quero pedir um reembolso</a>
             </div>
         </div>
     </main>
