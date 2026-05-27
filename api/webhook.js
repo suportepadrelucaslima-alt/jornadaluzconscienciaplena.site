@@ -47,7 +47,7 @@ async function enviarEmailAcesso(email, nomeCliente, produtoId) {
     </div>
   `;
   try {
-    await fetch('https://api.brevo.com/v3/smtp/email', {
+    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers: {
         'api-key': process.env.BREVO_API_KEY,
@@ -60,6 +60,12 @@ async function enviarEmailAcesso(email, nomeCliente, produtoId) {
         htmlContent: html,
       }),
     });
+    if (!res.ok) {
+      const body = await res.text();
+      console.error(`Brevo erro ${res.status}: ${body}`);
+    } else {
+      console.log(`Email enviado para ${email}`);
+    }
   } catch (err) {
     console.error('Erro ao enviar email Brevo:', err.message);
   }
