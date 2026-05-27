@@ -1,6 +1,5 @@
 .env
 node_modules/
-*.mp3
 *.mp4
 *.wav
 /package-lock.json
