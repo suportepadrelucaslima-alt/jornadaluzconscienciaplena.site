@@ -254,7 +254,8 @@
           <th>E-mail</th>
           <th>Produto</th>
           <th>Status</th>
-          <th>Data da compra</th>
+          <th>Compra</th>
+          <th>Último acesso</th>
         </tr>
       </thead>
       <tbody id="tabela-body"></tbody>
@@ -343,14 +344,18 @@
       tbody.innerHTML = `<tr><td colspan="4"><div class="empty-state"><i class="fas fa-inbox" style="font-size:2rem;display:block;margin-bottom:10px;opacity:.4"></i>Nenhum registro encontrado</div></td></tr>`;
       return;
     }
-    tbody.innerHTML = dados.map(r => `
-      <tr>
+    tbody.innerHTML = dados.map(r => {
+      const acessou = r.ultimo_acesso
+        ? `<span style="color:#5fd9a3"><i class="fas fa-circle-check" style="margin-right:5px"></i>${formatarData(r.ultimo_acesso)}</span>`
+        : `<span style="color:rgba(255,255,255,.3)"><i class="fas fa-clock" style="margin-right:5px"></i>Nunca acessou</span>`;
+      return `<tr>
         <td>${r.email}</td>
         <td><span class="produto-badge ${BADGE[r.produto_id] || ''}">${NOMES[r.produto_id] || r.produto_id}</span></td>
         <td>${r.ativo ? '<span class="status-ativo"><i class="fas fa-check-circle me-1"></i>Ativo</span>' : '<span class="status-inativo"><i class="fas fa-times-circle me-1"></i>Inativo</span>'}</td>
-        <td>${formatarData(r.created_at)}</td>
-      </tr>
-    `).join('');
+        <td style="color:rgba(255,255,255,.55)">${formatarData(r.created_at)}</td>
+        <td>${acessou}</td>
+      </tr>`;
+    }).join('');
   }
 
   async function carregarDados() {

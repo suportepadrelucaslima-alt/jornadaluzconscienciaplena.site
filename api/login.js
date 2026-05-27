@@ -51,6 +51,15 @@ module.exports = async (req, res) => {
   }
 
   const produtos = data.map(r => r.produto_id);
+
+  // Registra último acesso (silencioso se a coluna não existir ainda)
+  try {
+    await supabase
+      .from('compradores')
+      .update({ ultimo_acesso: new Date().toISOString() })
+      .eq('email', emailNorm);
+  } catch (_) {}
+
   const token = jwt.sign(
     { email: emailNorm, produtos },
     process.env.JWT_SECRET,

@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
 
   const { data, error } = await supabase
     .from('compradores')
-    .select('email, produto_id, ativo, created_at')
+    .select('email, produto_id, ativo, created_at, ultimo_acesso')
     .order('created_at', { ascending: false });
 
   if (error) {
