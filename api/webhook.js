@@ -125,7 +125,7 @@ module.exports = async (req, res) => {
   try {
     await registrarAcesso(emailNorm, produtoId);
     console.log(`Acesso liberado: ${emailNorm} → ${produtoId}`);
-    enviarEmailAcesso(emailNorm, nomeCliente, produtoId);
+    await enviarEmailAcesso(emailNorm, nomeCliente, produtoId);
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error('Erro ao registrar acesso:', err.message);
