@@ -1,5 +1,8 @@
 {
   "outputDirectory": ".",
+  "redirects": [
+    { "source": "/", "destination": "/login/", "permanent": false }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
