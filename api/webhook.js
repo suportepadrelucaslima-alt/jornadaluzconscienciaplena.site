@@ -50,6 +50,7 @@ module.exports = async (req, res) => {
     null;
 
   const produtoTicto =
+    String(body?.item?.product_id || '') ||
     body?.product?.code ||
     body?.product?.id ||
     body?.produto ||
@@ -58,7 +59,7 @@ module.exports = async (req, res) => {
 
   // Ignora eventos que não são de pagamento confirmado
   const evento = body?.event || body?.status || '';
-  if (evento && !['order.paid', 'payment.approved', 'approved', 'paid', 'APPROVED'].includes(evento)) {
+  if (evento && !['order.paid', 'payment.approved', 'approved', 'paid', 'APPROVED', 'authorized'].includes(evento)) {
     return res.status(200).json({ ok: true, ignorado: true });
   }
 
