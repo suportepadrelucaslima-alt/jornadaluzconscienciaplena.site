@@ -1,8 +1,13 @@
 {
   "outputDirectory": ".",
-  "trailingSlash": true,
   "redirects": [
-    { "source": "/", "destination": "/login/", "permanent": false }
+    { "source": "/", "destination": "/login/", "permanent": false },
+    { "source": "/login", "destination": "/login/", "permanent": false },
+    { "source": "/inicio-oracoes-principal", "destination": "/inicio-oracoes-principal/", "permanent": false },
+    { "source": "/poder-dos-arcanjos", "destination": "/poder-dos-arcanjos/", "permanent": false },
+    { "source": "/grimorio-dos-arcanjos", "destination": "/grimorio-dos-arcanjos/", "permanent": false },
+    { "source": "/30-oracoes-sao-francisco", "destination": "/30-oracoes-sao-francisco/", "permanent": false },
+    { "source": "/musicas-dos-anjos-premium", "destination": "/musicas-dos-anjos-premium/", "permanent": false }
   ],
   "headers": [
     {

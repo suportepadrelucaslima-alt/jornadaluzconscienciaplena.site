@@ -331,9 +331,7 @@
       erro.style.display = 'none';
 
       try {
-        const apiBase = window.location.hostname.includes('vercel.app')
-          ? '' : 'https://conexaoprosperidade-site.vercel.app';
-        const res  = await fetch(apiBase + '/api/login', {
+        const res  = await fetch('/api/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email })
