@@ -1,6 +1,6 @@
 {
   "outputDirectory": ".",
-  "trailingSlash": true,
+  "trailingSlash": false,
   "redirects": [
     { "source": "/", "destination": "/login/", "permanent": false },
     { "source": "/login", "destination": "/login/", "permanent": false },
