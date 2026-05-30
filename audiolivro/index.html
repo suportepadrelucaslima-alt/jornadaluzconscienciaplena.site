@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Audiolivro — Novena de Nossa Senhora Desatadora de Nós</title>
+  <title>Audiolivro — Oração Sagrada do Arcanjo Rafael</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -42,24 +42,10 @@
     .day-verse{color:rgba(255,255,255,.55);font-size:13px;font-style:italic;margin-bottom:14px;line-height:1.5;flex:1}
 
     /* Player */
-    .audio-player{
-      width:100%;
-      background:rgba(6,16,58,.70);
-      border:1.5px solid rgba(212,175,55,.30);
-      border-radius:12px;
-      padding:12px 14px;
-      display:flex;align-items:center;gap:10px;
-      margin-top:auto;
-    }
-    .play-btn{
-      background:#d4af37;border:none;color:#06103a;
-      border-radius:50%;width:42px;height:42px;font-size:16px;
-      display:flex;align-items:center;justify-content:center;
-      flex-shrink:0;cursor:pointer;transition:background .2s,transform .15s;
-    }
+    .audio-player{width:100%;background:rgba(6,16,58,.70);border:1.5px solid rgba(212,175,55,.30);border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;margin-top:auto}
+    .play-btn{background:#d4af37;border:none;color:#06103a;border-radius:50%;width:42px;height:42px;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;transition:background .2s,transform .15s}
     .play-btn:hover{background:#f2d675;transform:scale(1.08)}
     .play-btn:active{transform:scale(.94)}
-
     .progress-wrap{flex:1;display:flex;flex-direction:column;gap:5px}
     .progress-bar-bg{height:4px;background:rgba(255,255,255,.15);border-radius:3px;cursor:pointer;overflow:hidden}
     .progress-bar-fill{height:100%;background:#d4af37;border-radius:3px;width:0%;transition:width .3s linear}
@@ -79,16 +65,16 @@
 
   <div class="container py-4" style="max-width:1000px">
 
-    <a href="https://conexaoprosperidade.site/inicio-oracoes-principal" class="back-btn mb-3 d-inline-flex">
+    <a href="https://jornadaluzconscienciaplena.site/inicio-oracoes-principal" class="back-btn mb-3 d-inline-flex">
       <i class="fas fa-arrow-left"></i> Voltar para o Início
     </a>
 
     <div class="text-center mb-2">
-      <p style="color:rgba(212,175,55,.65);letter-spacing:4px;font-size:.72rem;font-family:'Cinzel',serif;">— ✦ DEVOÇÃO MARIANA ✦ —</p>
+      <p style="color:rgba(212,175,55,.65);letter-spacing:4px;font-size:.72rem;font-family:'Cinzel',serif;">— ✦ DEVOÇÃO AO ARCANJO ✦ —</p>
       <h1 class="title-font golden-text mb-1" style="font-size:1.9rem">
-        <i class="fas fa-headphones me-2"></i>Audiolivro — Novena Completa
+        <i class="fas fa-headphones me-2"></i>Audiolivro — Oração Sagrada Completa
       </h1>
-      <p style="color:rgba(255,255,255,.65);font-size:.95rem">Ouça as 9 orações de Nossa Senhora Desatadora de Nós</p>
+      <p style="color:rgba(255,255,255,.65);font-size:.95rem">Ouça as 9 orações de Arcanjo Rafael</p>
     </div>
 
     <div class="section-divider">
@@ -98,7 +84,7 @@
     </div>
 
     <p class="text-center mb-4" style="font-size:15px;color:#e6e6e6;max-width:600px;margin:0 auto 24px">
-      Clique no play do dia desejado para ouvir a oração e deixe Nossa Senhora desatar os nós da sua vida.
+      Clique no play do dia desejado para ouvir a oração e receba a cura e proteção do Arcanjo Rafael.
     </p>
 
     <div class="row g-4 justify-content-center">
@@ -108,8 +94,8 @@
         <div class="day-card" id="card0">
           <div class="day-badge">Dia 1</div>
           <div class="day-icon"><i class="fas fa-hands-praying"></i></div>
-          <h3 class="day-title">Desate os Nós que Atrapalham</h3>
-          <p class="day-verse">Um anjo entrega a Nossa Senhora um cordão cheio de nós — símbolo da sua vida e de todos os seus problemas. Peça que Ela desate tudo que te impede de avançar.</p>
+          <h3 class="day-title">Invocação do Arcanjo Rafael</h3>
+          <p class="day-verse">Abra seu coração ao Arcanjo Rafael e invoque sua presença sagrada, colocando sua vida sob sua proteção e guia divino.</p>
           <div class="audio-player">
             <button class="play-btn" onclick="toggleAudio(0)" id="btn0"><i class="fas fa-play"></i></button>
             <div class="progress-wrap">
@@ -126,8 +112,8 @@
         <div class="day-card" id="card1">
           <div class="day-badge">Dia 2</div>
           <div class="day-icon"><i class="fas fa-cross"></i></div>
-          <h3 class="day-title">Desatando o Nó do Pecado</h3>
-          <p class="day-verse">O nó da desobediência de Eva foi desfeito pela obediência de Maria. Nossa Senhora tem o poder de nos libertar do pecado e restaurar a graça de Deus em nossas vidas.</p>
+          <h3 class="day-title">Cura do Corpo</h3>
+          <p class="day-verse">O Arcanjo Rafael é o médico dos céus. Peça sua intercessão pela cura física de todas as enfermidades que afligem seu corpo.</p>
           <div class="audio-player">
             <button class="play-btn" onclick="toggleAudio(1)" id="btn1"><i class="fas fa-play"></i></button>
             <div class="progress-wrap">
@@ -144,8 +130,8 @@
         <div class="day-card" id="card2">
           <div class="day-badge">Dia 3</div>
           <div class="day-icon"><i class="fas fa-heart-crack"></i></div>
-          <h3 class="day-title">Desatando o Nó do Ressentimento</h3>
-          <p class="day-verse">O ressentimento aperta os nós e paralisa a alma. Entregue à Nossa Senhora as mágoas guardadas e deixe Ela desfazer os laços que prendem seu coração ao passado.</p>
+          <h3 class="day-title">Cura da Alma</h3>
+          <p class="day-verse">Deixe Rafael curar as feridas mais profundas do seu interior — traumas, mágoas e dores que nenhuma medicina humana alcança.</p>
           <div class="audio-player">
             <button class="play-btn" onclick="toggleAudio(2)" id="btn2"><i class="fas fa-play"></i></button>
             <div class="progress-wrap">
@@ -162,8 +148,8 @@
         <div class="day-card" id="card3">
           <div class="day-badge">Dia 4</div>
           <div class="day-icon"><i class="fas fa-hands-praying"></i></div>
-          <h3 class="day-title">4º Dia da Novena</h3>
-          <p class="day-verse">Fique no Colo da Mãe. Deixe Nossa Senhora guiar seus passos neste quarto dia e confie plenamente em Seu amor e intercessão por você e pelos seus.</p>
+          <h3 class="day-title">Proteção na Jornada</h3>
+          <p class="day-verse">Como guiou Tobias em segurança, peça a Rafael que proteja seus caminhos, suas viagens e as decisões da sua vida.</p>
           <div class="audio-player">
             <button class="play-btn" onclick="toggleAudio(3)" id="btn3"><i class="fas fa-play"></i></button>
             <div class="progress-wrap">
@@ -180,8 +166,8 @@
         <div class="day-card" id="card4">
           <div class="day-badge">Dia 5</div>
           <div class="day-icon"><i class="fas fa-hand-holding-dollar"></i></div>
-          <h3 class="day-title">Desatando o Nó da Vida Financeira</h3>
-          <p class="day-verse">Confie em Deus, desapegue-se dos bens e aja com sabedoria. "Deus prove, Deus proverá" — peça a Nossa Senhora que desfaça os nós que travam sua prosperidade.</p>
+          <h3 class="day-title">Paz Interior e Libertação</h3>
+          <p class="day-verse">Invoque Rafael para afastar toda opressão espiritual e ansiedade — e receba a paz profunda que vem de Deus através de sua intercessão.</p>
           <div class="audio-player">
             <button class="play-btn" onclick="toggleAudio(4)" id="btn4"><i class="fas fa-play"></i></button>
             <div class="progress-wrap">
@@ -198,8 +184,8 @@
         <div class="day-card" id="card5">
           <div class="day-badge">Dia 6</div>
           <div class="day-icon"><i class="fas fa-heart-pulse"></i></div>
-          <h3 class="day-title">Desatando o Nó da Saúde</h3>
-          <p class="day-verse">"Confio em Jesus, médico dos médicos!" Peça a Nossa Senhora que interceda pela cura do seu corpo, da sua mente e de todos que você ama e carrega em oração.</p>
+          <h3 class="day-title">Amor e Relacionamentos</h3>
+          <p class="day-verse">Peça ao Arcanjo que abençoe seus laços afetivos, cure relacionamentos feridos e guie seu coração ao amor verdadeiro que Deus preparou.</p>
           <div class="audio-player">
             <button class="play-btn" onclick="toggleAudio(5)" id="btn5"><i class="fas fa-play"></i></button>
             <div class="progress-wrap">
@@ -216,8 +202,8 @@
         <div class="day-card" id="card6">
           <div class="day-badge">Dia 7</div>
           <div class="day-icon"><i class="fas fa-flag"></i></div>
-          <h3 class="day-title">Desatando os Nós que Fazem Desistir</h3>
-          <p class="day-verse">Comprometa-se com os projetos que Deus plantou em seu coração. Deixe Nossa Senhora desatar os nós que impedem seu progresso e abençoe sua caminhada.</p>
+          <h3 class="day-title">Força e Coragem Espiritual</h3>
+          <p class="day-verse">Receba de Rafael a força para enfrentar os combates espirituais e a coragem de seguir o caminho de Deus sem recuar.</p>
           <div class="audio-player">
             <button class="play-btn" onclick="toggleAudio(6)" id="btn6"><i class="fas fa-play"></i></button>
             <div class="progress-wrap">
@@ -234,8 +220,8 @@
         <div class="day-card" id="card7">
           <div class="day-badge">Dia 8</div>
           <div class="day-icon"><i class="fas fa-shield-halved"></i></div>
-          <h3 class="day-title">Desatando o Nó da Falta de Fé</h3>
-          <p class="day-verse">Quando a fé vacila, Nossa Senhora segura o cordão. Peça a Ela que fortaleça sua confiança em Deus e desfaça os nós da dúvida e do desânimo espiritual.</p>
+          <h3 class="day-title">Bênção e Prosperidade</h3>
+          <p class="day-verse">Confie ao Arcanjo Rafael suas necessidades materiais e peça que abra os caminhos das bênçãos que Deus preparou para você.</p>
           <div class="audio-player">
             <button class="play-btn" onclick="toggleAudio(7)" id="btn7"><i class="fas fa-play"></i></button>
             <div class="progress-wrap">
@@ -252,8 +238,8 @@
         <div class="day-card" id="card8" style="border-color:rgba(212,175,55,.9);box-shadow:0 6px 22px rgba(212,175,55,.22)">
           <div class="day-badge" style="background:linear-gradient(135deg,#b8870b,#f7de6a,#b8870b)">Dia 9 ✦</div>
           <div class="day-icon"><i class="fas fa-crown"></i></div>
-          <h3 class="day-title">9º Dia — Novena Completa</h3>
-          <p class="day-verse">No último dia, encerre a novena entregando-se completamente a Nossa Senhora. Receba a graça de uma vida renovada, com todos os nós desatados pelo amor de Maria.</p>
+          <h3 class="day-title">9º Dia — Consagração e Gratidão</h3>
+          <p class="day-verse">No último dia, consagre sua vida ao Arcanjo Rafael com gratidão pelas graças recebidas e renove sua aliança com Deus.</p>
           <div class="audio-player">
             <button class="play-btn" onclick="toggleAudio(8)" id="btn8"><i class="fas fa-play"></i></button>
             <div class="progress-wrap">
@@ -268,7 +254,7 @@
     </div>
 
     <div class="text-center mt-4 mb-2">
-      <a href="https://conexaoprosperidade.site/inicio-oracoes-principal" class="btn-voltar">
+      <a href="https://jornadaluzconscienciaplena.site/inicio-oracoes-principal" class="btn-voltar">
         <i class="fas fa-home me-2"></i>Voltar ao Início
       </a>
     </div>
@@ -278,80 +264,11 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script>
     const TOTAL = 9;
-
-    function fmtTime(s) {
-      if (!s || isNaN(s)) return '0:00';
-      const m = Math.floor(s / 60);
-      const sec = Math.floor(s % 60);
-      return m + ':' + (sec < 10 ? '0' : '') + sec;
-    }
-
-    function setPlaying(idx, playing) {
-      const card = document.getElementById('card' + idx);
-      const btn = document.getElementById('btn' + idx);
-      if (!card || !btn) return;
-      if (playing) {
-        card.classList.add('playing');
-        btn.innerHTML = '<i class="fas fa-pause"></i>';
-      } else {
-        card.classList.remove('playing');
-        btn.innerHTML = '<i class="fas fa-play"></i>';
-      }
-    }
-
-    function toggleAudio(idx) {
-      const a = document.getElementById('audio' + idx);
-      if (!a) return;
-      if (a.paused) {
-        for (let i = 0; i < TOTAL; i++) {
-          if (i !== idx) {
-            const other = document.getElementById('audio' + i);
-            if (other && !other.paused) {
-              other.pause();
-              other.currentTime = 0;
-              document.getElementById('prog' + i).style.width = '0%';
-              document.getElementById('time' + i).textContent = '0:00';
-              setPlaying(i, false);
-            }
-          }
-        }
-        a.play().catch(() => {});
-        setPlaying(idx, true);
-      } else {
-        a.pause();
-        setPlaying(idx, false);
-      }
-    }
-
-    function seekAudio(e, idx) {
-      const a = document.getElementById('audio' + idx);
-      if (!a || !a.duration) return;
-      const rect = e.currentTarget.getBoundingClientRect();
-      const pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-      a.currentTime = pct * a.duration;
-    }
-
-    for (let i = 0; i < TOTAL; i++) {
-      (function(idx) {
-        const a = document.getElementById('audio' + idx);
-        if (!a) return;
-        const p = document.getElementById('prog' + idx);
-        const t = document.getElementById('time' + idx);
-        a.addEventListener('timeupdate', () => {
-          if (a.duration) {
-            p.style.width = (a.currentTime / a.duration * 100) + '%';
-            t.textContent = fmtTime(a.currentTime) + ' / ' + fmtTime(a.duration);
-          }
-        });
-        a.addEventListener('ended', () => {
-          setPlaying(idx, false);
-          p.style.width = '0%';
-          a.currentTime = 0;
-          t.textContent = '0:00';
-          if (idx + 1 < TOTAL) toggleAudio(idx + 1);
-        });
-      })(i);
-    }
+    function fmtTime(s){if(!s||isNaN(s))return'0:00';const m=Math.floor(s/60),sec=Math.floor(s%60);return m+':'+(sec<10?'0':'')+sec}
+    function setPlaying(idx,playing){const card=document.getElementById('card'+idx),btn=document.getElementById('btn'+idx);if(!card||!btn)return;if(playing){card.classList.add('playing');btn.innerHTML='<i class="fas fa-pause"></i>'}else{card.classList.remove('playing');btn.innerHTML='<i class="fas fa-play"></i>'}}
+    function toggleAudio(idx){const a=document.getElementById('audio'+idx);if(!a)return;if(a.paused){for(let i=0;i<TOTAL;i++){if(i!==idx){const o=document.getElementById('audio'+i);if(o&&!o.paused){o.pause();o.currentTime=0;document.getElementById('prog'+i).style.width='0%';document.getElementById('time'+i).textContent='0:00';setPlaying(i,false)}}}a.play().catch(()=>{});setPlaying(idx,true)}else{a.pause();setPlaying(idx,false)}}
+    function seekAudio(e,idx){const a=document.getElementById('audio'+idx);if(!a||!a.duration)return;const rect=e.currentTarget.getBoundingClientRect(),pct=Math.max(0,Math.min(1,(e.clientX-rect.left)/rect.width));a.currentTime=pct*a.duration}
+    for(let i=0;i<TOTAL;i++){(function(idx){const a=document.getElementById('audio'+idx);if(!a)return;const p=document.getElementById('prog'+idx),t=document.getElementById('time'+idx);a.addEventListener('timeupdate',()=>{if(a.duration){p.style.width=(a.currentTime/a.duration*100)+'%';t.textContent=fmtTime(a.currentTime)+' / '+fmtTime(a.duration)}});a.addEventListener('ended',()=>{setPlaying(idx,false);p.style.width='0%';a.currentTime=0;t.textContent='0:00';if(idx+1<TOTAL)toggleAudio(idx+1)})})(i)}
   </script>
 </body>
 </html>
