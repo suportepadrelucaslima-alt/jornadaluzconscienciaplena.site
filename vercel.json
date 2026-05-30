@@ -1,20 +1,9 @@
 {
   "outputDirectory": ".",
-  "trailingSlash": false,
+  "trailingSlash": true,
   "redirects": [
-    { "source": "/", "destination": "/login", "permanent": false }
-  ],
-  "rewrites": [
-    { "source": "/login", "destination": "/login/index.html" },
-    { "source": "/inicio-oracoes-principal", "destination": "/inicio-oracoes-principal/index.html" },
-    { "source": "/jornada-de-7-dias", "destination": "/jornada-de-7-dias/index.html" },
-    { "source": "/instrucoes", "destination": "/instrucoes/index.html" },
-    { "source": "/audiolivro", "destination": "/audiolivro/index.html" },
-    { "source": "/musica-dos-anjos", "destination": "/musica-dos-anjos/index.html" },
-    { "source": "/musicas-dos-anjos", "destination": "/musicas-dos-anjos/index.html" },
-    { "source": "/oracoes-especiais", "destination": "/oracoes-especiais/index.html" },
-    { "source": "/obrigado", "destination": "/obrigado/index.html" },
-    { "source": "/reembolso", "destination": "/reembolso/index.html" }
+    { "source": "/", "destination": "/login/", "permanent": false },
+    { "source": "/login", "destination": "/login/", "permanent": false }
   ],
   "headers": [
     {
