@@ -9,6 +9,8 @@ const supabase = createClient(
 const PRODUTO_MAP = {
   'ub0ADR7NHF2qMTlfSLZD': 'oracao-principal',
   '9SVuEA2HskOIfgduwuvJ': 'oracao-principal',
+  'uKsOfZWAq2xqtG407usi': 'oracao-principal',
+  '6OfCF2ytlbwtFKUz9IAO': 'oracao-principal',
 };
 
 const PRODUTO_NOME = {

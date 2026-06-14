@@ -30,8 +30,8 @@ module.exports = async (req, res) => {
 
   const { data, error } = await supabase
     .from('compradores')
-    .select('email, produto_id, ativo, created_at, ultimo_acesso')
-    .order('created_at', { ascending: false });
+    .select('email, produto_id, ativo, criado_em, ultimo_acesso')
+    .order('criado_em', { ascending: false });
 
   if (error) {
     console.error('Supabase error:', error.message);
