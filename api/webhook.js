@@ -11,6 +11,9 @@ const PRODUTO_MAP = {
   '9SVuEA2HskOIfgduwuvJ': 'oracao-principal',
   'uKsOfZWAq2xqtG407usi': 'oracao-principal',
   '6OfCF2ytlbwtFKUz9IAO': 'oracao-principal',
+  'YyLmnUj3VN8JvzBljSqe': 'oracao-principal',
+  'YkICksWbnACgVoC0udNw': 'oracao-principal',
+  'nRNrvGs8TO5Uc2w3FVUI': 'oracao-principal',
 };
 
 const PRODUTO_NOME = {
